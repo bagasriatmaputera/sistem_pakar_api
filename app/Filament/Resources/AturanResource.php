@@ -13,14 +13,12 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AturanResource extends Resource
 {
     protected static ?string $model = Aturan::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
 
     public static function form(Form $form): Form
     {
@@ -59,7 +57,9 @@ class AturanResource extends Resource
                 TextColumn::make('gejala.nama')
                     ->label('Nama gejala:'),
                 TextColumn::make('lvl_adiksi.nama')
-                    ->label('Nama Penyakit/Tingkat Adiksi:')
+                    ->label('Nama Penyakit/Tingkat Adiksi:'),
+                TextColumn::make('cf_pakar')
+                ->label('CF_Pakar')
             ])
             ->filters([
                 //
