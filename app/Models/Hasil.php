@@ -10,14 +10,17 @@ class Hasil extends Model
 
     protected $fillable = [
         'pengguna_id',
-        'lvl_adiksi_id',
-        'cf_akhir'
+        'cf_loss_of_control',
+        'cf_craving',
+        'cf_tolerance',
+        'cf_withdrawal',
+        'cf_preoccupation_salience',
+        'cf_continued_use_despite_harm',
+        'cf_functional_impairment',
     ];
 
-    public function lvl_adiksi(){
-        return $this->hasOne(Lvl_adiksi::class);
-    }
     public function pengguna(){
-        return $this->hasOne(Pengguna::class);
+        $this->hasOne(Pengguna::class);
     }
+
 }
