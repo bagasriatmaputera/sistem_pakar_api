@@ -10,10 +10,11 @@ class Pengguna extends Model
     protected $fillable = [
         'nama',
         'umur',
+        'jenis_kelamin',
         'prodi'
     ];
 
     public function hasil(){
-        return $this->belongsTo(Hasil::class);
+        return $this->belongsTo(Hasil::class,'pengguna_id');
     }
 }
