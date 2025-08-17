@@ -37,7 +37,7 @@ class LevelAdiksiResource extends Resource
                     ->disabled() // agar user tidak ubah
                     ->dehydrated(true),
                     TextInput::make('nama')
-                    ->label('Tingkat Kecanduan:')
+                    ->label('Kategori Kecanduan:')
                     ->required()
                     ->helperText('Masukan tingkat adiksi'),
                     Textarea::make('deskripsi')
@@ -58,7 +58,7 @@ class LevelAdiksiResource extends Resource
                 TextColumn::make('kode')
                 ->label('Kode'),
                 TextColumn::make('nama')
-                ->label('Tingkat Adiksi')
+                ->label('Kategori Adiksi')
                 ->searchable(),
                 TextColumn::make('deskripsi')
                 ->label('Deskripsi'),
