@@ -36,7 +36,7 @@ class HasilResource extends Resource
                 TextColumn::make('pengguna.nama')
                 ->label('Pengguna'),
                 TextColumn::make('lvl_adiksi.nama')
-                ->label('Pengguna')
+                ->label('Adiksi')
             ])
             ->filters([
                 //

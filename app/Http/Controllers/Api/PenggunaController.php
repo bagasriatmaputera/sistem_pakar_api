@@ -13,4 +13,6 @@ class PenggunaController extends Controller
         $pengguna = Pengguna::all();
         return PenggunaResource::collection($pengguna);
     }
+
+    
 }
