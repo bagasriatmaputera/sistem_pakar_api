@@ -6,6 +6,7 @@ use App\Filament\Resources\HasilResource\Pages;
 use App\Filament\Resources\HasilResource\RelationManagers;
 use App\Models\Hasil;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -24,7 +25,7 @@ class HasilResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('')
             ]);
     }
 
