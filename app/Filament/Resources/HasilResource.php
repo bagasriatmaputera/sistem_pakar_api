@@ -21,13 +21,8 @@ class HasilResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    public static function form(Form $form): Form
-    {
-        return $form
-            ->schema([
-                TextInput::make('')
-            ]);
-    }
+    protected static ?string $navigationLabel = 'Hasil CF';
+    protected static ?int $navigationSort = 5;
 
     public static function table(Table $table): Table
     {
@@ -35,8 +30,10 @@ class HasilResource extends Resource
             ->columns([
                 TextColumn::make('pengguna.nama')
                 ->label('Pengguna'),
-                TextColumn::make('lvl_adiksi.nama')
-                ->label('Adiksi')
+                TextColumn::make('adiksi.nama')
+                ->label('Adiksi'),
+                TextColumn::make('cf_final')
+                ->label('CF Akhir %')
             ])
             ->filters([
                 //
@@ -62,8 +59,6 @@ class HasilResource extends Resource
     {
         return [
             'index' => Pages\ListHasils::route('/'),
-            'create' => Pages\CreateHasil::route('/create'),
-            'edit' => Pages\EditHasil::route('/{record}/edit'),
         ];
     }
 }

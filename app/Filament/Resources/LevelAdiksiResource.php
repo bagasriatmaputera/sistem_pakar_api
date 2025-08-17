@@ -21,6 +21,8 @@ class LevelAdiksiResource extends Resource
 {
     protected static ?string $model = Lvl_adiksi::class;
 
+    protected static ?string $navigationLabel = 'Kat Adiksi';
+    protected static ?int $navigationSort = 3;
     protected static ?string $navigationIcon = 'heroicon-o-identification';
 
     public static function form(Form $form): Form

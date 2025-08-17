@@ -18,6 +18,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class GejalaResource extends Resource
 {
     protected static ?string $model = Gejala::class;
+    protected static ?int $navigationSort = 2;
+
+    protected static ?string $navigationLabel = 'Kelola Gejala';
 
     protected static ?string $navigationIcon = 'heroicon-o-shield-exclamation';
 
