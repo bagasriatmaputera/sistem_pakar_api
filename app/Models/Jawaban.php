@@ -14,4 +14,13 @@ class Jawaban extends Model
         'cf_user',
         'cf_kombinasi',
     ];
+
+    public function pengguna()
+    {
+        return $this->belongsTo(Pengguna::class);
+    }
+    public function adiksi()
+    {
+        return $this->belongsTo(Lvl_adiksi::class);
+    }
 }
