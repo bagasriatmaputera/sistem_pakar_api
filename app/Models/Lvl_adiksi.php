@@ -18,4 +18,8 @@ class Lvl_adiksi extends Model
     public function aturan(){
         return $this->hasOne(Aturan::class);
     }
+
+    public function hasil(){
+        $this->hasMany(Hasil::class);
+    }
 }
