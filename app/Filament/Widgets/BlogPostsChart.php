@@ -16,8 +16,8 @@ class BlogPostsChart extends ChartWidget
             ->with('adiksi') // ambil relasi
             ->groupBy('adiksi_id')
             ->get();
-
-        $konsisten = Jawaban::where('cf_kombinasi', '>=', 0.5)->count();
+        
+        
 
 
         return [

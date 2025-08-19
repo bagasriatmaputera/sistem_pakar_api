@@ -24,4 +24,8 @@ class Hasil extends Model
     {
         return $this->belongsTo(Lvl_adiksi::class);
     }
+    public function gejala()
+    {
+        return $this->belongsTo(Gejala::class);
+    }
 }

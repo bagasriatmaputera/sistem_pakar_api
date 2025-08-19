@@ -15,7 +15,7 @@ class Pengguna extends Model
     ];
 
     public function hasil(){
-        return $this->belongsTo(Hasil::class,'pengguna_id');
+        return $this->hasMany(Hasil::class,'pengguna_id');
     }
     public function jawaban(){
         return $this->hasMany(Jawaban::class);

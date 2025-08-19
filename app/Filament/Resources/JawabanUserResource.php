@@ -29,9 +29,9 @@ class JawabanUserResource extends Resource
                 TextColumn::make('pengguna.nama')
                     ->label('Nama:')
                     ->searchable(),
-                TextColumn::make('gejala.nama')
+                TextColumn::make('gejala.kode')
                     ->label('Gejala:'),
-                TextColumn::make('adiksi.nama')
+                TextColumn::make('adiksi.kode')
                     ->label('Adiksi:'),
                 TextColumn::make('cf_user')
                     ->label('CF User:'),
