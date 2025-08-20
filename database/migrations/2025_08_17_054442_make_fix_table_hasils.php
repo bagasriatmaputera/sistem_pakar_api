@@ -24,7 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('adiksi_id');
             $table->float('cf_final');
             $table->foreign('adiksi_id')->references('id')->on('lvl_adiksis');
-            $table->date('tgl_diagnosa')->useCurrent();
+            $table->date('tgl_diagnosa');
         });
     }
 
